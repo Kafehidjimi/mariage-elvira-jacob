@@ -103,7 +103,9 @@ export const wedding = {
     dressCodeText:
       "Pour accompagner nos couleurs, nous vous invitons à porter du bleu profond, du crème ou de l'ivoire.",
     rsvpTitle: "Votre présence nous fera honneur",
-    rsvpIntro: "Merci de nous confirmer votre présence avant le",
+    rsvpIntro: "Merci de nous confirmer votre présence.",
+    /** Suivi de la date limite, si une date limite est définie. */
+    rsvpIntroDeadline: "Merci de nous confirmer votre présence avant le",
     rsvpClosed:
       "Les réponses en ligne sont closes. Pour toute question sur votre venue, appelez-nous directement.",
     contactTitle: "Pour plus d'informations",
@@ -164,8 +166,9 @@ export const wedding = {
   ] satisfies Contact[],
 
   rsvp: {
-    // TODO: date limite à confirmer (proposition du brief : 2 novembre 2026, fin de journée).
-    deadline: "2026-11-02T23:59:59Z",
+    // Pas de date limite : le formulaire reste ouvert. Pour en remettre une,
+    // indiquer une date ISO, par ex. "2026-11-02T23:59:59Z".
+    deadline: null as string | null,
     // TODO: nombre maximal de personnes par réponse à confirmer (défaut du brief : 2).
     maxGuests: 2,
     eventChoices: [

@@ -369,9 +369,9 @@ export function RSVPForm() {
               <Button type="submit" disabled={status === "sending"} className="w-full sm:w-auto sm:min-w-72">
                 {status === "sending" ? "Envoi en cours…" : "Envoyer ma réponse"}
               </Button>
-              <p className="text-small text-navy/80">
-                Réponse souhaitée avant le {formatLongDate(wedding.rsvp.deadline)}.
-              </p>
+              {wedding.rsvp.deadline ? (
+                <p className="text-small text-navy/80">Réponse souhaitée avant le {formatLongDate(wedding.rsvp.deadline)}.</p>
+              ) : null}
             </div>
           </motion.form>
         )}

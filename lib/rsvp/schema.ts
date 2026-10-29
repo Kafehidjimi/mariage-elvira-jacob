@@ -102,5 +102,6 @@ export function toRecord(data: RsvpData, now = new Date()): RsvpRecord {
 }
 
 export function isRsvpOpen(now = Date.now()) {
-  return now <= new Date(wedding.rsvp.deadline).getTime();
+  const { deadline } = wedding.rsvp;
+  return deadline === null || now <= new Date(deadline).getTime();
 }

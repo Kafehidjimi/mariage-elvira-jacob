@@ -55,7 +55,7 @@ Guide pas à pas : **[docs/GOOGLE_SETUP.md](docs/GOOGLE_SETUP.md)**.
   vers `https://maps.app.goo.gl/175yEJs6nrCfNewM7` (Google Maps de l'église). La carte ne mène donc pas au site :
   l'adresse du site est libre, et le lien doit être partagé autrement (WhatsApp…).
 - **Ordre des prénoms** : « Elvira & Jacob », comme sur la carte (`nameOrder` dans `wedding.ts`).
-- **Date limite RSVP** : 2 novembre 2026 23h59 (Abidjan) ; **maximum** : 2 personnes par réponse.
+- **Date limite RSVP** : aucune (formulaire toujours ouvert, `rsvp.deadline = null`) ; **maximum** : 2 personnes par réponse.
 - **Mairie d'Adjamé** : lien Maps de recherche générique, à remplacer par le lien exact.
 - **Or → beige** : tous les ornements dorés de la carte deviennent des filets beige (`#E8DDCB`) ;
   un beige plus soutenu (`beige-ornament`) sert aux ornements posés sur l'ivoire, pour rester visibles.

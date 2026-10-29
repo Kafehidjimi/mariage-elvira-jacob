@@ -10,7 +10,9 @@ export function RSVPSection() {
       <SectionTitle id="rsvp-title" eyebrow="RSVP" title={wedding.texts.rsvpTitle} tone="navy" />
       <Reveal className="mx-auto mt-6 max-w-xl text-center">
         <p className="text-body text-ivory/90">
-          {wedding.texts.rsvpIntro} {formatLongDate(wedding.rsvp.deadline)}.
+          {wedding.rsvp.deadline
+            ? `${wedding.texts.rsvpIntroDeadline} ${formatLongDate(wedding.rsvp.deadline)}.`
+            : wedding.texts.rsvpIntro}
         </p>
       </Reveal>
       <Reveal className="mx-auto mt-12 max-w-3xl">
